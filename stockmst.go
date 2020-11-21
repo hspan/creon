@@ -1,9 +1,5 @@
 package creon
 
-import (
-	ole "github.com/go-ole/go-ole"
-	"github.com/go-ole/go-ole/oleutil"
-)
 type StockMst struct {
 	CpClass
 }

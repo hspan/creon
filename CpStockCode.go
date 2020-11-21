@@ -38,7 +38,7 @@ func (c *CpStockCode) CodeToIndex(code string) (r *ole.VARIANT) {
 }
 
 func (c *CpStockCode) GetCount() (r *ole.VARIANT) {
-	return oleutil.MustCallMethod(c.obj, "GetCount", code)
+	return oleutil.MustCallMethod(c.obj, "GetCount")
 }
 
 func (c *CpStockCode) GetData(typ int, idx int) (r *ole.VARIANT) {
