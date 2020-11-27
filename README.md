@@ -20,6 +20,7 @@ v0에서는 하나의 오브젝트에 있는 함수를 다 추가하면 마이�
 ### v0
 #### v0.0.0 - CpCodeMgr 일부
 #### V0.1.0 - CpCodeMgr + CpCybos
+#### V0.2.1 - CpStockMst, CpStockCode, CpTdUtil 추가
 <br>
 작업을 시작한 단계로 정상적인 작동은 보장하지 않습니다.
 <p>
