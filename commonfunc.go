@@ -3,8 +3,25 @@ package creon
 import (
 	ole "github.com/go-ole/go-ole"
 	"github.com/go-ole/go-ole/oleutil"
+	"golang.org/x/sys/windows"
+	"fmt"
 )
 
+func IsUserAnAdmin() (bool, error) {
+	shell32 := windows.NewLazySystemDLL("Shell32.dll")
+	defer windows.FreeLibrary(windows.Handle(shell32.Handle()))
+
+	isUserAnAdminProc := shell32.NewProc("IsUserAnAdmin")
+	ret, _, winError := isUserAnAdminProc.Call()
+
+	if winError != windows.NTE_OP_OK {
+		return false, fmt.Errorf("IsUserAnAdmin returns error code %d", winError)
+	}
+	if ret == 0 {
+		return false, nil
+	}
+	return true, nil
+}
 
 // 사이보스플러스 Property Getter 메서드입니다.
 // Continue 프로퍼티 값을 얻어옵니다.
