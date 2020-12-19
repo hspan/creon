@@ -1,8 +1,8 @@
 package creon
 
 import (
-	ole "github.com/go-ole/go-ole"
-	"github.com/go-ole/go-ole/oleutil"
+	ole "github.com/hspan/go-ole"
+	"github.com/hspan/go-ole/oleutil"
 )
 
 type CpStockCode struct {
