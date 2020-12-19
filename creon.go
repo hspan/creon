@@ -6,7 +6,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	ole "github.com/go-ole/go-ole"
+	ole "github.com/hspan/go-ole"
 )
 
 // peekmessage 로드, 이벤트 iid
@@ -36,7 +36,7 @@ type Receiver interface {
 // 사이보스플러스 객체
 type CpClass struct {
 	unk  *ole.IUnknown
-	obj  *ole.IDispatch
+	obj *ole.IDispatch
 	evnt *dispCpEvent
 
 	// for event
