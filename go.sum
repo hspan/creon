@@ -1,0 +1,4 @@
+github.com/hspan/go-ole v0.0.0 h1:MDEICoMJcLPvXXDWNUVXs7FwTAAQ0Ce3NrM7VtDldz0=
+github.com/hspan/go-ole v0.0.0/go.mod h1:1CZaAIg39xkVgUG51OiN2DLBpgtf/7R9mFo7EAxLfsQ=
+golang.org/x/sys v0.0.0-20201218084310-7d0127a74742 h1:+CBz4km/0KPU3RGTwARGh/noP3bEwtHcq+0YcBQM2JQ=
+golang.org/x/sys v0.0.0-20201218084310-7d0127a74742/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=

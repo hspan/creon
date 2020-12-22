@@ -140,15 +140,15 @@ func (c *CpCodeMgr) GetStockElwBasketCompList(code string) (r *ole.VARIANT) {
 	return oleutil.MustCallMethod(c.obj, "GetStockElwBasketCompList", code)
 }
 
-func (c *CpCodeMgr) GetStockListByMarket(marketcode string) (r *ole.VARIANT) {
+func (c *CpCodeMgr) GetStockListByMarket(marketcode int) (r *ole.VARIANT) {
 	return oleutil.MustCallMethod(c.obj, "GetStockListByMarket", marketcode)
 }
 
-func (c *CpCodeMgr) GetGroupCodeList(code string) (r *ole.VARIANT) {
+func (c *CpCodeMgr) GetGroupCodeList(code int) (r *ole.VARIANT) {
 	return oleutil.MustCallMethod(c.obj, "GetGroupCodeList", code)
 }
 
-func (c *CpCodeMgr) GetGroupName (code string) (r *ole.VARIANT) {
+func (c *CpCodeMgr) GetGroupName (code int) (r *ole.VARIANT) {
 	return oleutil.MustCallMethod(c.obj, "GetGroupName", code)
 }
 
