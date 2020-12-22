@@ -28,3 +28,9 @@ func RetStr(r *ole.VARIANT) (ret string) {
 	ret = r.Value().(string)
 	return
 }
+
+//RetBool 참/거짓 반환
+func RetBool(r *ole.VARIANT) (ret bool) {
+	ret = r.Val != 0
+	return
+}
