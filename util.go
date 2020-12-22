@@ -16,7 +16,7 @@ func RetSS(r *ole.VARIANT) (ret []string) {
 	return 
 }
 
-//RETInt 정수 반환
+//RetInt 정수 반환
 func RetInt(r *ole.VARIANT) (ret int) {
 	ret = int(r.Value().(int32))
 	return
