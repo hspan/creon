@@ -55,3 +55,13 @@ codeMgr := &creon.CpCodeMgr{}
 codeMgr.Create()
 ```
 위와 같이 &creon.coclass명{}으로 선언하고 Create 함수로 생성합니다.
+
+## 리턴된 인터페이스를 각 타입으로 변환함수
+RetSS - []string으로 변환
+RetInt - int32로 반환된 값을 int로 다시 변환하여 반환
+RetStr - string 반환
+RetBool - 불 값 반환
+RetLong - Long형태의 정수를 int64로 반환함
+
+### 사용법 예 (creon_test.go 참조)
+creon.RetInt(codeMgr.GetStockMarketKind("A000020"))

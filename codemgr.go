@@ -37,7 +37,6 @@ func (c *CpCodeMgr) IsSPAC(code string) (r *ole.VARIANT) {
 	return oleutil.MustCallMethod(c.obj, "IsSPAC", code)
 }
 
-
 func (c *CpCodeMgr) GetStockControlKind (code string) (r *ole.VARIANT) {
 	return oleutil.MustCallMethod(c.obj, "GetStockControlKind", code)
 }
@@ -117,8 +116,6 @@ func (c *CpCodeMgr) IsStockCreditEnable(code string) (r *ole.VARIANT) {
 func (c *CpCodeMgr) GetStockParPriceChageType (code string) (r *ole.VARIANT) {
 	return oleutil.MustCallMethod(c.obj, "GetStockParPriceChageType", code)
 }
-
-
 
 func (c *CpCodeMgr) GetMiniFutureList() (r *ole.VARIANT) {
 	return oleutil.MustCallMethod(c.obj, "GetMiniFutureList")
