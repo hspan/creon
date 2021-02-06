@@ -44,3 +44,11 @@ func TestCodeMgr(t *testing.T) {
 		t.Errorf("error!! need false but %d return", ldate)
 	}
 }
+
+func TestCybos(t *testing.T) {
+	cybos := CpCybos{}
+	cybos.Create()
+	if ! RetBool(cybos.IsConnect()) {
+		t.Error("연결에러")
+	}
+}
