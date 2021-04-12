@@ -1,5 +1,5 @@
 package creon
-
+// codeMgr 함수
 import (
 	ole "github.com/hspan/go-ole"
 	"github.com/hspan/go-ole/oleutil"
