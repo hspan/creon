@@ -37,8 +37,21 @@ func (c *CpCodeMgr) IsSPAC(code string) (r *ole.VARIANT) {
 	return oleutil.MustCallMethod(c.obj, "IsSPAC", code)
 }
 
-func (c *CpCodeMgr) GetStockControlKind (code string) (r *ole.VARIANT) {
+func (c *CpCodeMgr) GetStockControlKind(code string) (r *ole.VARIANT) {
 	return oleutil.MustCallMethod(c.obj, "GetStockControlKind", code)
+}
+
+func (c *CpCodeMgr) GetOverHeating(code string) (r *ole.VARIANT) {
+	return oleutil.MustCallMethod(c.obj, "GetOverHeating", code)
+}
+
+
+func (c *CpCodeMgr) IsStockArrgSby(code string) (r *ole.VARIANT) {
+	return oleutil.MustCallMethod(c.obj, "IsStockArrgSby", code)
+}
+
+func (c *CpCodeMgr) IsStockIoi(code string) (r *ole.VARIANT) {
+	return oleutil.MustCallMethod(c.obj, "IsStockIoi", code)
 }
 
 func (c *CpCodeMgr) GetStockSupervisionKind (code string) (r *ole.VARIANT) {
@@ -127,6 +140,10 @@ func (c *CpCodeMgr) GetMiniOptionList() (r *ole.VARIANT) {
 
 func (c *CpCodeMgr) ReLoadPortData() (r *ole.VARIANT) {
 	return oleutil.MustCallMethod(c.obj, "ReLoadPortData")
+}
+
+func (c *CpCodeMgr) IsBigListingStock(code string) (r *ole.VARIANT) {
+	return oleutil.MustCallMethod(c.obj, "IsBigListingStock", code)
 }
 
 func (c *CpCodeMgr) GetStockElwBasketCodeList(code string) (r *ole.VARIANT) {
