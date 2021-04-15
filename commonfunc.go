@@ -35,8 +35,13 @@ func (c *CpClass) SetInputValue(typ int, val interface{}) {
 }
 
 // 사이보스플러스 BlockRequest 메서드 Wrapper
-func (c *CpClass) BlockRequest() {
-	_ = oleutil.MustCallMethod(c.obj, "BlockRequest")
+func (c *CpClass) BlockRequest() (result *ole.VARIANT) {
+	return oleutil.MustCallMethod(c.obj, "BlockRequest")
+}
+
+// 사이보스플러스 BlockRequest2 메서드 Wrapper
+func (c *CpClass) BlockRequest2(option int) (result *ole.VARIANT) {
+	return oleutil.MustCallMethod(c.obj, "BlockRequest2", option)
 }
 
 // 사이보스플러스 BlockRequest 메서드 Wrapper
@@ -77,3 +82,14 @@ func (c *CpClass) GetHeaderValue(typ int) (result *ole.VARIANT) {
 func (c *CpClass) GetDataValue(typ int, idx int) (result *ole.VARIANT) {
 	return oleutil.MustCallMethod(c.obj, "GetDataValue", typ, idx)
 }
+
+// 사이보스플러스 GetDibStatus 메서드 Wrapper
+func (c *CpClass) GetDibStatus() (result *ole.VARIANT) {
+	return oleutil.MustCallMethod(c.obj, "GetDibStatus")
+}
+
+// 사이보스플러스 GetDibMsg1 메서드 Wrapper
+func (c *CpClass) GetDibMsg1() (result *ole.VARIANT) {
+	return oleutil.MustCallMethod(c.obj, "GetDibMsg1")
+}
+
