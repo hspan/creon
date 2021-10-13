@@ -46,7 +46,7 @@ err := ole.CoInitializeEx(0, ole.COINIT_MULTITHREADED)
 if err != nil {panic(err)}
 defer ole.CoUninitialize()
 ```
-위와 같은 내용을 creon plus를 사용하는 최상위 함수(보통 amin)에 호출해야 합니다.
+위와 같은 내용을 creon plus를 사용하는 최상위 함수(보통 main)에 호출해야 합니다.
 ole.CoInitialize(0)의 경우에는 에러가 발생하는 경우가 있었으며 멀티스레딩을 사용하지 못하는 것이므로 위와 같이 멀티스레딩이 가능하도록 호출하는 것이 좋을 것 같습니다.
 
 ## 객체 생성
