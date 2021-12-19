@@ -6,7 +6,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	ole "github.com/hspan/go-ole"
+	ole "github.com/go-ole/go-ole"
 )
 
 // peekmessage 로드, 이벤트 iid
@@ -36,7 +36,7 @@ type Receiver interface {
 // 사이보스플러스 객체
 type CpClass struct {
 	unk  *ole.IUnknown
-	obj *ole.IDispatch
+	Obj *ole.IDispatch
 	evnt *dispCpEvent
 
 	// for event
@@ -97,7 +97,7 @@ func (c *CpClass) Create(name string) {
 		panic(err)
 	}
 	// get obj
-	c.obj, err = c.unk.QueryInterface(ole.IID_IDispatch)
+	c.Obj, err = c.unk.QueryInterface(ole.IID_IDispatch)
 	if err != nil {
 		panic(err)
 	}
@@ -110,9 +110,9 @@ func (c *CpClass) Release() {
 		c.unk.Release()
 		c.unk = nil
 	}
-	if c.obj != nil {
-		c.obj.Release()
-		c.obj = nil
+	if c.Obj != nil {
+		c.Obj.Release()
+		c.Obj = nil
 	}
 	if c.evnt != nil {
 		//c.evnt.Release()
@@ -165,7 +165,7 @@ func (c *CpClass) BindEvent(callback Receiver) {
 		c.UnbindEvent()
 	}
 	// connectionpoint container
-	unknown_con, err := c.obj.QueryInterface(ole.IID_IConnectionPointContainer)
+	unknown_con, err := c.Obj.QueryInterface(ole.IID_IConnectionPointContainer)
 	if err != nil {
 		panic(err)
 	}

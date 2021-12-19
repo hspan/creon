@@ -2,7 +2,7 @@ package creon
 
 import (
 	"testing"
-	ole "github.com/hspan/go-ole"
+	ole "github.com/go-ole/go-ole"
 	"sort"
 )
 

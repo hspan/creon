@@ -3,6 +3,6 @@ module github.com/hspan/creon
 go 1.15
 
 require (
-	github.com/hspan/go-ole v0.0.0
-	golang.org/x/sys v0.0.0-20201218084310-7d0127a74742
+	github.com/go-ole/go-ole v1.2.6
+	golang.org/x/sys v0.0.0-20211025201205-69cdffdb9359
 )
